@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js" prefix="og: http://ogp.me/ns#">
+
+    <!-- build:include html-blocks/common/head.html -->
+    This will be replaced by the content of html-blocks/common/head.html
+    <!-- /build -->
+    <style type="text/css">
+      @-webkit-keyframes grow{
+        0% {
+          -webkit-transform: scale(0.3);
+          fill: green;
+        }
+        30% {
+          -webkit-transform: scale(1);
+          fill: green;
+        }
+        60% {
+          fill: #CE1700;
+          -webkit-transform: scale(1.2);
+        }
+        100% {
+          fill: #CE1700;
+          -webkit-transform: scale(1.2);
+        }
+      }
+      
+      @-webkit-keyframes breeze{
+        0% {
+          -webkit-transform: rotate(0deg);
+        }
+        50% {
+          -webkit-transform: rotate(10deg);
+        }
+        100% {
+          -webkit-transform: rotate(0deg);
+        }
+      }
+      @-webkit-keyframes peck-right{
+        0% {
+          -webkit-transform: rotate(0deg) translateY(0px) translateX(0px);
+        }
+        50% {
+          -webkit-transform: rotate(70deg) translateY(40px) translateX(-30px);
+        }
+        100% {
+          -webkit-transform: rotate(0deg) translateY(0px) translateX(0px);
+        }
+      }
+      @-webkit-keyframes blinks{
+        0% {
+          -webkit-transform: translateX(0px);
+        }
+        50% {
+          -webkit-transform: translateX(10px);
+        }
+        100% {
+          -webkit-transform: translateX(0px);
+        }
+      }
+
+
+      @-webkit-keyframes move-top10{
+        0% {
+          -webkit-transform: translateY(0px);
+        }
+        50% {
+          -webkit-transform: translateY(-20px);
+        }
+        100% {
+          -webkit-transform: translateY(0px);
+        }
+      }
+      @-webkit-keyframes move-top20{
+        0% {
+          -webkit-transform: translateY(0px);
+        }
+        50% {
+          -webkit-transform: translateY(-20px);
+        }
+        100% {
+          -webkit-transform: translateY(0px);
+        }
+      }
+      @-webkit-keyframes rotate10{
+        0% {
+          -webkit-transform: rotate(0deg);
+        }
+        25% {
+          -webkit-transform: rotate(5deg);
+        }
+        /*50% {
+          -webkit-transform: rotate(0deg);
+        }*/
+        75% {
+          -webkit-transform: rotate(-5deg);
+        }
+        100% {
+          -webkit-transform: rotate(0deg);
+        }
+      }
+      .st112{
+        -webkit-transform-origin: 50% 50%;
+        -webkit-animation: grow 10s ease-out infinite;
+      }
+      .tree{
+        -webkit-transform-origin: 50% 100%;
+        -webkit-animation: breeze 3s ease-out infinite;
+      }
+      #chiken_yellow{
+        -webkit-transform-origin: 50% 100%;
+        -webkit-animation: peck-right 2s ease-out infinite;
+      }
+
+      #berries_1>circle{
+        -webkit-transform-origin: 50% 50%;
+        -webkit-animation: grow 8s ease-out infinite;
+        -webkit-animation-delay: 1000ms;
+      }
+      #plants_1_>g{
+        -webkit-transform-origin: 50% 50%;
+        -webkit-animation: grow 8s ease-out infinite;
+        -webkit-animation-delay: 3000ms;
+      }
+      #bull_1_tail,#bull_2_tail{
+        -webkit-transform-origin: 0% 0%;
+        -webkit-animation: rotate10 3s ease-out infinite;
+      }
+      #cow_1_head{
+        -webkit-transform-origin: 50% 50%;
+        -webkit-animation: move-top10 3s ease-out infinite;
+      }
+      #cow_2_head{
+        -webkit-transform-origin: 50% 50%;
+        -webkit-animation: move-top10 3s ease-out infinite;
+        -webkit-animation-delay: 1500ms;
+      }
+     #cow_1_tonque{
+        -webkit-transform-origin: 50% 50%;
+        -webkit-animation: move-top20 3s ease-out infinite;
+      }
+      #soon_1,#soon_2,#soon_3{
+        -webkit-transform-origin: 50% 100%;
+        -webkit-animation: rotate10 5s ease-out infinite;
+        -webkit-animation-delay: 1500ms;
+      }
+      #river_lights>path:nth-child(odd){
+        -webkit-transform-origin: 50% 50%;
+        -webkit-animation: blinks 3000ms ease-out infinite;
+      }
+      #river_lights>path:nth-child(even){
+        -webkit-transform-origin: 50% 50%;
+        -webkit-animation: blinks 3000ms ease-out infinite;
+        -webkit-animation-delay: 500ms;
+      }
+
+    </style>
+    <body>
+
+        <!-- build:include html-blocks/common/if-ie.html -->
+        This will be replaced by the content of html-blocks/common/if-ie.html
+        <!-- /build -->
+
+        <!-- build:include html-blocks/pages--external/header--external.html -->
+        This will be replaced by the content of html-blocks/pages--external/header--external.html
+        <!-- /build -->
+
+        <main>
+          <div class="section">
+            <!-- build:include html-blocks/pages--external/production-block.html -->
+            This will be replaced by the content of html-blocks/pages--external/production-block.html
+            <!-- /build -->
+          </div>
+          <div class="section lsv-footer fp-auto-height">
+            <!-- build:include html-blocks/pages--external/footer.html -->
+            This will be replaced by the content of html-blocks/pages--external/footer.html
+            <!-- /build -->
+              
+          </div>
+        </main>
+
+        <!-- build:include html-blocks/pages--external/footer--external.html -->
+        This will be replaced by the content of html-blocks/pages--external/footer--external.html
+        <!-- /build -->
+        <script type="text/javascript">
+            $(document).ready(function () {
+              var ferm = Snap("#ferm");
+              var bakery = Snap('#bakery'),
+              bakery_hover = Snap('#bakery_hover'),
+              cheese_house = Snap('#cheese_house_1_'),
+              cheese_house_hover = Snap('#cheese_house_hover'),
+              car_path = Snap("#way_car>path"), 
+              bull = Snap('#bull_2'),
+              bull_popup = Snap('#bulls_hover'),
+              milk = Snap('#cow_1'),
+              milk_popup = Snap('#milk_hover'),
+              cheese = Snap('#cheese_house_1_'),
+              cheese_popup = Snap('#cheese_hover'),
+              bakery_new = Snap('#bakery'),
+              bakery_popup = Snap('#cooking_hover'),
+              car = Snap('#car'),
+              car_popup = Snap('#accept_hover');
+
+              var bee_paths = [], bees = [], paths_length = 1127;
+              var cheese_box = cheese_house_hover.getBBox(),
+                  bakery_box = bakery_hover.getBBox(),
+                  bull_box = bull_popup.getBBox(),
+                  milk_box = milk_popup.getBBox(),
+                  cheese_box = cheese_popup.getBBox(),
+                  bakery_box_new = bakery_popup.getBBox(), 
+                  car_box = car_popup.getBBox();
+
+              var cheeseHoverIn = new Snap.Matrix(),
+                  cheeseHoverOut = new Snap.Matrix(),
+                  bakeryHoverIn = new Snap.Matrix(),
+                  bakeryHoverOut = new Snap.Matrix(),
+                  bullHoverIn = new Snap.Matrix(), 
+                  bullHoverOut = new Snap.Matrix(),
+                  milkHoverIn = new Snap.Matrix(), 
+                  milkHoverOut = new Snap.Matrix(),
+                  cheeseHoverIn = new Snap.Matrix(), 
+                  cheeseHoverOut = new Snap.Matrix(),
+                  bakery_newHoverIn = new Snap.Matrix(), 
+                  bakery_newHoverOut = new Snap.Matrix(), 
+                  carHoverIn = new Snap.Matrix(), 
+                  carHoverOut = new Snap.Matrix();
+              cheeseHoverIn.scale(1,1,2200,700);
+              cheeseHoverOut.scale(0,0,2200,700);
+              bakeryHoverIn.scale(1,1,bakery_box.cx,bakery_box.cy);
+              bakeryHoverOut.scale(0,0,bakery_box.cx,bakery_box.cy);
+              bullHoverIn.scale(1,1,900,1350);
+              bullHoverOut.scale(0,0,900,1350);
+              milkHoverIn.scale(1,1,1900,1100);
+              milkHoverOut.scale(0,0,1900,1100);
+              cheeseHoverIn.scale(1,1,1900,2000);
+              cheeseHoverOut.scale(0,0,1900,2000);
+              bakery_newHoverIn.scale(1,1,2750,1200);
+              bakery_newHoverOut.scale(0,0,2750,1200);
+              carHoverIn.scale(1,1,2177,2455);
+              carHoverOut.scale(0,0,2177,2455);
+
+              bakery_hover.transform(bakeryHoverOut);
+              cheese_house_hover.transform(cheeseHoverOut);
+              bull_popup.transform(bullHoverOut);
+              milk_popup.transform(milkHoverOut);
+              cheese_popup.transform(cheeseHoverOut);
+              bakery_popup.transform(bakeryHoverOut);
+              car_popup.transform(carHoverOut);
+
+              var timeOutBull;
+              var timeOutMilk;
+              var timeOutBakery;
+              var timeOutCheese;
+              var timeOutCar;
+              
+              bakery.hover(
+                function(){
+                  clearTimeout(timeOutBakery);
+                  bakery_hover.animate({ transform: bakeryHoverIn },500, mina.elastic);
+              },
+                function(){
+                  clearTimeout(timeOutBakery);
+                  bakery_hover.animate({ transform: bakeryHoverOut },500, mina.backin);
+              });
+
+              cheese_house.hover(
+                function(){
+                  clearTimeout(timeOutCheese);
+                  cheese_house_hover.animate({ transform: cheeseHoverIn },500, mina.elastic);
+              },
+                function(){
+                 clearTimeout(timeOutCheese);
+                 timeOutCheese = setTimeout(function() {cheese_house_hover.animate({ transform: cheeseHoverOut },500, mina.backin)}, 1000);
+              });
+
+              bull.hover(
+                function(){
+                  clearTimeout(timeOutBull);
+                  bull_popup.animate({ transform: bullHoverIn },500, mina.elastic);
+                },
+                function(){
+                  clearTimeout(timeOutBull);
+                  timeOutBull = setTimeout(function () {bull_popup.animate({ transform: bullHoverOut },500, mina.backin)}, 1000);
+              });
+
+              milk.hover(
+                function(){
+                  clearTimeout(timeOutMilk);
+                  milk_popup.animate({ transform: milkHoverIn },500, mina.elastic);
+              },
+                function(){
+                  clearTimeout(timeOutMilk);
+                  timeOutMilk = setTimeout(function() {milk_popup.animate({ transform: milkHoverOut },500, mina.backin)}, 1000);
+              });
+
+              cheese.hover(
+                function(){
+                  clearTimeout(timeOutCheese);
+                  cheese_popup.animate({ transform: cheeseHoverIn },500, mina.elastic);
+              },
+                function(){
+                  clearTimeout(timeOutCheese);
+                  timeOutCheese = setTimeout(function () {cheese_popup.animate({ transform: cheeseHoverOut },500, mina.backin)}, 1000);
+              });
+
+              bakery_new.hover(
+                function(){
+                  clearTimeout(timeOutBakery);
+                  bakery_popup.animate({ transform: bakery_newHoverIn },500, mina.elastic);
+              },
+                function(){
+                  clearTimeout(timeOutBakery);
+                  timeOutBakery = setTimeout(function () {bakery_popup.animate({ transform: bakery_newHoverOut },500, mina.backin)}, 1000);
+              });
+
+              car.hover(
+                function(){
+                  clearTimeout(timeOutCar);
+                  car_popup.animate({ transform: carHoverIn },500, mina.elastic);
+              },
+                function(){
+                  clearTimeout(timeOutCar);
+                  timeOutCar = setTimeout(function () {car_popup.animate({ transform: carHoverOut },500, mina.backin)}, 1000);
+              });
+
+              
+
+              $("#bulls_hover").hover(function(){
+                  clearTimeout(timeOutBull);
+                  bull_popup.animate({ transform: bullHoverIn},500, mina.elastic);
+              }, function(){
+                 timeOutBull = setTimeout(function () {bull_popup.animate({ transform: bullHoverOut },500, mina.backin)}, 1000); 
+              });
+              $("#milk_hover").hover(function(){
+                  clearTimeout(timeOutMilk);
+                  milk_popup.animate({ transform: milkHoverIn },500, mina.elastic);
+              }, function(){
+                  timeOutMilk = setTimeout(function () {milk_popup.animate({ transform: milkHoverOut },500, mina.backin)}, 1000);  
+              });
+              $("#cheese_hover").hover(function(){
+                  clearTimeout(timeOutCheese);
+                  cheese_popup.animate({ transform: cheeseHoverIn },500, mina.elastic);
+              }, function(){
+                  timeOutCheese = setTimeout(function () {cheese_popup.animate({ transform: cheeseHoverOut },500, mina.backin)}, 1000);  
+              });
+              $("#cooking_hover").hover(function(){
+                  clearTimeout(timeOutBakery);
+                  bakery_popup.animate({ transform: bakery_newHoverIn },500, mina.elastic);
+              }, function(){
+                  timeOutBakery = setTimeout(function() {bakery_popup.animate({ transform: bakery_newHoverOut },500, mina.backin)}, 1000);
+              });
+              $("#accept_hover").hover(function(){
+                  clearTimeout(timeOutCar);
+                  car_popup.animate({ transform: carHoverIn },500, mina.elastic);
+              }, function(){
+                  timeOutCar = setTimeout(function() {car_popup.animate({ transform: carHoverOut },500, mina.backin)}, 1000);  
+              });
+
+              var beePoints = [0,0,0,0];
+
+              
+              for( var i = 1; i < 5; i++){
+                bees.push(ferm.select("#bee_"+i));
+                bee_paths.push(ferm.select("#bee_path_"+i));
+                bee_paths[i-1].attr({
+                  opacity: 0
+                });
+              }
+               var widthSvg = $("html").width();
+               var heightSvg = screen.height;
+
+              //$("#ferm").css({"width": "1300px"}); //3594 / 2825
+              $("#ferm").css({"height": ""+heightSvg+"px"});
+              //$(".lsv-ferm").css({"width": ""+widthSvg+"px"});
+
+              //alert(screen.height);
+
+              function animateAlongPath(index, displace){
+                  Snap.animate(0, paths_length, function(value){
+                    beePoints[index] = bee_paths[index].getPointAtLength( value );
+                    bees[index].transform( 't' + parseInt(beePoints[index].x - 2280 + displace[0]) + ',' + parseInt(beePoints[index].y - 1875 + displace[1]) + 'r' + parseInt( beePoints[index].alpha+45+displace[2]));
+                  }, 5000);
+              }
+
+              car_path
+              .attr({
+                opacity: 0
+              });
+              
+
+              animateAlongPath(0, [0,0,180]);
+              animateAlongPath(1, [-350,200,0]);
+              animateAlongPath(2, [-600,225,45-180]);
+              animateAlongPath(3, [-525,-75,180]);
+
+              setInterval(function(){
+                  animateAlongPath(0, [0,0,180]);
+                  animateAlongPath(1, [-350,200,0]);
+                  animateAlongPath(2, [-600,225,45+180]);
+                  animateAlongPath(3, [-525,-75,180]);
+                },5000);
+            }); 
+        </script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+          $('#lsv-slides').fullpage({
+            'css3': true,
+            'easing': 'easeOutElastic',
+            'fitToSection': false,
+            'fixedElements': '.lsv-nav , .lsv-menu',
+            'scrollOverflow': true
+          });
+        });
+        </script>
+
+    </body>
+
+</html>

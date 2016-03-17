@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js" prefix="og: http://ogp.me/ns#">
+
+    <!-- build:include html-blocks/common/head.html -->
+    This will be replaced by the content of html-blocks/common/head.html
+    <!-- /build -->
+
+    <body>
+
+        <!-- build:include html-blocks/common/if-ie.html -->
+        This will be replaced by the content of html-blocks/common/if-ie.html
+        <!-- /build -->
+
+        <!-- build:include html-blocks/pages--external/header--external.html -->
+        This will be replaced by the content of html-blocks/pages--external/header--external.html
+        <!-- /build -->
+
+        <main id='lsv-slides'>
+          <div class="section">
+            <!-- build:include html-blocks/pages--external/main-video-block.html -->
+            This will be replaced by the content of html-blocks/pages--external/main-video-block.html
+            <!-- /build -->
+          </div>  
+          <div class="section lsv-slide-bgc">
+            <!-- build:include html-blocks/pages--external/main-anim-block.html -->
+            This will be replaced by the content of html-blocks/pages--external/main-anim-block.html
+            <!-- /build -->
+          </div>
+          <div class="section lsv-footer fp-auto-height">
+            <!-- build:include html-blocks/pages--external/footer.html -->
+            This will be replaced by the content of html-blocks/pages--external/footer.html
+            <!-- /build -->
+              
+          </div>
+                    
+        </main>
+
+        <!-- build:include html-blocks/pages--external/footer--external.html -->
+        This will be replaced by the content of html-blocks/pages--external/footer--external.html
+        <!-- /build -->
+        <script type="text/javascript">
+          $(document).ready(function(){
+            $('#lsv-slides').fullpage({
+              'css3': true,
+              'easing': 'easeOutElastic',
+              'fitToSection': false,
+              'fixedElements': '.lsv-nav , .lsv-menu',
+              'scrollOverflow': false,
+              afterRender: function(){
+                $("#lsv-main_video-text").owlCarousel({
+                  navigation: false,
+                  pagination: false,
+                  slideSpeed: 300,
+                  singleItem:true,
+                  autoPlay: 3000
+                });
+              }
+            });
+            if(window.innerWidth <= 992){
+              $.fn.fullpage.destroy();
+            }
+
+            var berry = Snap.select("#berries>.st1>circle");
+            var arrYear = ['winter-color','spring-color','summer-color','autumn-color'];  
+
+            var leaves = Snap.select("#jogurt>path");
+            var arrLeaves = ['maryannik-color','molochai-color','reven-color'];  
+
+            var textYear = ['Время года влияет на насыщенность цвета ягод которые используются в йогуртах «Лосево»'];
+            var textLeaves = ['Корм, которым питались коровы придаёт молоку еле-заметный оттенок'];
+
+            $(".block-seasons-option:nth-child(3)").click(function () {
+                $(this).addClass("active").siblings().removeClass("active");
+                berry.removeClass("st2");  
+                for (var i = 0; i <= arrYear.length; i++) {
+                  berry.removeClass(""+arrYear[i]+"");  
+                }   
+               $("#berries>.st1>circle").attr("class", "winter-color");
+               $("#season-text-option").text(textYear[0]);
+            });
+
+            $(".block-seasons-option:nth-child(5)").click(function () {
+                $(this).addClass("active").siblings().removeClass("active");
+                berry.removeClass("st2");  
+                for (var i = 0; i <= arrYear.length; i++) {
+                  berry.removeClass(""+arrYear[i]+"");  
+                }     
+                $("#berries>.st1>circle").attr("class", "summer-color");    
+                $("#season-text-option").text(textYear[0]);    
+            });
+
+            $(".block-seasons-option:nth-child(4)").click(function () {
+                $(this).addClass("active").siblings().removeClass("active");
+                berry.removeClass("st2");   
+                for (var i = 0; i <= arrYear.length; i++) {
+                  berry.removeClass(""+arrYear[i]+"");  
+                }     
+                $("#berries>.st1>circle").attr("class", "spring-color");           
+                $("#season-text-option").text(textYear[0]);  
+            });
+
+            $(".block-seasons-option:nth-child(6)").click(function () {
+                $(this).addClass("active").siblings().removeClass("active");
+                berry.removeClass("st2");  
+                for (var i = 0; i <= arrYear.length; i++) {
+                  berry.removeClass(""+arrYear[i]+"");  
+                }     
+                $("#berries>.st1>circle").attr("class", "autumn-color");          
+                $("#season-text-option").text(textYear[0]);  
+            });
+
+            var s = Snap("#svg-text-right-block-svg");
+
+            $(".block-leaves-option:nth-child(3)").click(function () {
+                $(this).addClass("active").siblings().removeClass("active");
+                leaves.removeClass("st0");  
+                for (var i = 0; i <= arrLeaves.length; i++) {
+                  leaves.removeClass(""+arrLeaves[i]+"");  
+                }     
+                leaves.addClass("reven-color");           
+                $("#leaves-text-option").text(textLeaves[0]);
+            });
+
+            $(".block-leaves-option:nth-child(4)").click(function () {
+                $(this).addClass("active").siblings().removeClass("active");
+                leaves.removeClass("st0");   
+                for (var i = 0; i <= arrLeaves.length; i++) {
+                  leaves.removeClass(""+arrLeaves[i]+"");  
+                }     
+                leaves.addClass("maryannik-color");
+                $("#leaves-text-option").text(textLeaves[0]);          
+            });
+
+            $(".block-leaves-option:nth-child(5)").click(function () {
+                $(this).addClass("active").siblings().removeClass("active");
+                leaves.removeClass("st0");  
+                for (var i = 0; i <= arrLeaves.length; i++) {
+                  leaves.removeClass(""+arrLeaves[i]+"");  
+                }     
+                leaves.addClass("molochai-color");   
+                $("#leaves-text-option").text(textLeaves[0]);     
+            });
+          });
+        </script>
+
+    </body>
+
+</html>
